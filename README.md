@@ -6,12 +6,13 @@ A static site presenting the GOAL Client Resources Website Section Strategy.
 
 | URL | File | Description |
 | --- | --- | --- |
-| `/` | `index.html` | Landing page linking to all resources |
-| `/strategy` | `strategy.html` | Strategy & implementation plan |
-| `/dashboard` | `dashboard.html` | Structured dashboard view |
+| `/` | `index.html` | The current Client Resources Strategy dashboard |
 | `/goal-client-resources-strategy.pdf` | PDF | Source PDF document |
 
-This is a plain static site — no build step or dependencies. The pages are
+The homepage serves the most up-to-date report (the structured strategy
+dashboard) directly.
+
+This is a plain static site — no build step or dependencies. The page is
 self-contained HTML with inline CSS (fonts are loaded from Google Fonts).
 
 ## Deploying to Vercel
@@ -34,5 +35,5 @@ vercel --prod # production deployment
 
 ## Configuration
 
-[`vercel.json`](./vercel.json) enables `cleanUrls` so pages are served at
-extension-less paths (e.g. `/strategy` instead of `/strategy.html`).
+[`vercel.json`](./vercel.json) enables `cleanUrls` so any paths are served
+without their `.html` extension.
