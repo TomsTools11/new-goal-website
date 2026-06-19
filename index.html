@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GOAL — Client Resources Strategy</title>
+<meta name="description" content="GOAL Client Resources Website Section Strategy — strategy documents and dashboard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#057BE5; --blue-hover:#0C6EC5; --sky:#2D90EE; --mint:#3BEECA;
+  --navy:#00172D; --navy-2:#062c4e; --navy-deep:#001020;
+  --ink:#0F1B2D; --body:#2B3442; --muted:#6A7482;
+  --white:#fff; --line:#E2E8F0;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{-webkit-font-smoothing:antialiased;}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:radial-gradient(1200px 600px at 50% -10%,var(--navy-2),var(--navy-deep));
+  color:var(--white);min-height:100vh;
+  display:flex;align-items:center;justify-content:center;padding:40px 20px;
+}
+.wrap{width:100%;max-width:840px;}
+.eb{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--sky);margin-bottom:14px;}
+h1{font-size:clamp(30px,5vw,46px);font-weight:900;line-height:1.08;letter-spacing:-.02em;margin-bottom:16px;}
+.sub{font-size:17px;color:#a7c2da;line-height:1.65;max-width:600px;margin-bottom:44px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+.card{
+  display:flex;flex-direction:column;background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:28px;
+  text-decoration:none;color:inherit;transition:transform .15s,border-color .15s,background .15s;
+}
+.card:hover{transform:translateY(-4px);border-color:var(--mint);background:rgba(255,255,255,.07);}
+.card .ico{font-size:26px;margin-bottom:16px;}
+.card h2{font-size:19px;font-weight:700;color:#fff;margin-bottom:8px;}
+.card p{font-size:14px;color:#9fbcd6;line-height:1.6;flex-grow:1;}
+.card .go{margin-top:18px;font-size:13px;font-weight:600;color:var(--mint);display:flex;align-items:center;gap:6px;}
+.foot{margin-top:46px;font-size:12px;color:#6f93b3;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eb">GOAL</div>
+  <h1>Client Resources Website Section Strategy</h1>
+  <p class="sub">Strategy and implementation materials for the GOAL client resources website section. Choose a view below.</p>
+
+  <div class="grid">
+    <a class="card" href="/strategy">
+      <div class="ico">📋</div>
+      <h2>Strategy &amp; Implementation Plan</h2>
+      <p>The full written strategy and implementation plan for the client resources section.</p>
+      <span class="go">Open document →</span>
+    </a>
+
+    <a class="card" href="/dashboard">
+      <div class="ico">📊</div>
+      <h2>Structured Dashboard</h2>
+      <p>A structured, navigable dashboard view of the strategy with sections and detail.</p>
+      <span class="go">Open dashboard →</span>
+    </a>
+
+    <a class="card" href="/goal-client-resources-strategy.pdf">
+      <div class="ico">📄</div>
+      <h2>Source PDF</h2>
+      <p>Download the original Client Resources Website Section Strategy PDF.</p>
+      <span class="go">Download PDF →</span>
+    </a>
+  </div>
+
+  <p class="foot">© GOAL — Client Resources Strategy</p>
+</div>
+</body>
+</html>
