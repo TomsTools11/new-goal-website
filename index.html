@@ -4,128 +4,54 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
-<title>GOAL — Website SEO &amp; Content Strategy (Overview)</title>
+<title>GOAL — Website SEO &amp; Content Strategy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/report.css">
 </head>
-<body>
-<div class="shell">
-  <aside class="side">
-    <img class="logo" src="assets/goal-logo.png" alt="GOAL">
-    <div class="eb">GOAL Website · OKR</div>
-    <h1>SEO &amp; Content Strategy</h1>
-    <div class="who">Website redesign workstream<br>Two SEO audits + content strategy<br>June 2026</div>
-    <nav>
-      <a href="#s1"><span class="dot"></span>The three reports</a>
-      <a href="#s2"><span class="dot"></span>Current state vs. target</a>
-      <a href="#s3"><span class="dot"></span>OKR &amp; North Star</a>
-      <a href="#s4"><span class="dot"></span>What's in this update</a>
-      <a href="#s5"><span class="dot"></span>Sources</a>
-    </nav>
-    <div class="reports">
-      <div class="rl">Reports</div>
-      <a href="index" class="on">Overview</a>
-      <a href="seo-audit-current">01 · Current-site audit</a>
-      <a href="seo-audit-redesign">02 · Redesign audit</a>
-      <a href="content-strategy">03 · Content strategy</a>
-    </div>
-    <div class="foot">GOAL Performance Marketing<br>Overview · June 2026</div>
-  </aside>
+<body class="landing">
+  <div class="lwrap">
 
-  <main class="main">
+    <header class="lhead">
+      <img class="logo" src="assets/goal-logo.png" alt="GOAL">
+      <h1>Website SEO &amp; Content Strategy</h1>
+      <p>Two SEO audits and the content strategy for the GOAL website redesign. June 2026.</p>
+    </header>
 
-    <div class="exec">
-      <p><b>Turning the GOAL website from a brochure into a lead-gen arm.</b> Today <span class="mono">checkoutgoal.com</span> has zero search visibility and converts only the word-of-mouth demand it's handed — ~5–10 demo requests a month, unmeasured. This workstream — the quarter's priority OKR — pairs a premium redesign with the SEO and content foundation it has never had. This overview links the three deliverables: a <b>full audit of the current site</b>, a <b>pre-launch audit of the redesign</b>, and the <b>content strategy</b> for the on-domain Resources Hub that turns search into pipeline.</p>
-    </div>
+    <main class="cardgrid">
 
-    <!-- ===================== 01 REPORTS ===================== -->
-    <section class="block" id="s1">
-      <div class="bhead"><span class="ix">01</span><div><h2>The three reports</h2><p>Each stands alone; together they're the plan</p></div></div>
-      <div class="rgrid">
-        <a class="rcard" href="seo-audit-current">
-          <div class="rn">Report 01 · Audit</div>
-          <h3>Current-Site SEO Audit</h3>
-          <p>A live, evidence-backed review of <span class="mono">checkoutgoal.com</span> — crawlability, on-page, structured data, off-domain authority, AI visibility, and analytics. Graded, with a prioritised fix list.</p>
-          <span class="go">Read the report →</span>
-        </a>
-        <a class="rcard" href="seo-audit-redesign">
-          <div class="rn">Report 02 · Audit</div>
-          <h3>Redesign SEO Audit</h3>
-          <p>A blueprint &amp; pre-launch-readiness audit of the new staging site — IA, schema, GEO, programmatic pages, rendering and launch hygiene, KPIs, and a ranked risk register.</p>
-          <span class="go">Read the report →</span>
-        </a>
-        <a class="rcard" href="content-strategy">
-          <div class="rn">Report 03 · Content</div>
-          <h3>Content Strategy</h3>
-          <p>The strategic case, information architecture, copy &amp; schema playbook, and content roadmap for the on-domain Resources Hub — the source material for the new <span class="mono">/resources/</span> section.</p>
-          <span class="go">Read the report →</span>
-        </a>
-      </div>
-      <p class="small">Reference: the source <a href="goal-client-resources-strategy.pdf">Client Resources Strategy PDF</a> remains in the repo for archive.</p>
-    </section>
+      <a class="card blue" href="seo-audit-current">
+        <span class="badge">01</span>
+        <div class="eb">Audit · Current site</div>
+        <h2>Current-Site SEO Audit</h2>
+        <p>A graded, evidence-backed review of checkoutgoal.com — what's missing, what's working, and the fixes that matter most.</p>
+        <div class="pills"><span class="pill">Scorecard</span><span class="pill">Technical + on-page</span><span class="pill">Fix list</span></div>
+        <span class="open">Open report →</span>
+      </a>
 
-    <!-- ===================== 02 STATE ===================== -->
-    <section class="block" id="s2">
-      <div class="bhead"><span class="ix">02</span><div><h2>Current state vs. target</h2><p>The gap, in numbers</p></div></div>
-      <div class="kgrid">
-        <div class="kc"><div class="v acc">0</div><div class="k">Indexable resource pages today</div><div class="d">No <span class="mono">/resources</span>, <span class="mono">/guides</span>, or <span class="mono">/blog</span></div></div>
-        <div class="kc"><div class="v acc">0</div><div class="k">Schema · OG · sitemap · llms.txt</div><div class="d">None on the current site</div></div>
-        <div class="kc"><div class="v acc">0</div><div class="k">AI-answer visibility</div><div class="d">Not citable by ChatGPT / Perplexity today</div></div>
-        <div class="kc"><div class="v">2</div><div class="k">Best guides stranded off-domain</div><div class="d">On <span class="mono">*.vercel.app</span>, building no brand equity</div></div>
-        <div class="kc"><div class="v">None</div><div class="k">Analytics &amp; Search Console</div><div class="d">Traffic is currently unmeasured</div></div>
-        <div class="kc"><div class="v">5–10 → 30–50+</div><div class="k">Monthly demo requests</div><div class="d">The lift this workstream targets</div></div>
-      </div>
-      <div class="callout key"><span class="lab">The throughline</span><p>Every "0" above is an <b>omission, not a penalty</b> — there is nothing to undo, only to build. The redesign is the one-time chance to ship the content layer, technical foundation, and measurement that compound on the brand's own domain.</p></div>
-    </section>
+      <a class="card sky" href="seo-audit-redesign">
+        <span class="badge">02</span>
+        <div class="eb">Audit · Redesign (pre-launch)</div>
+        <h2>Redesign SEO Audit</h2>
+        <p>A pre-launch read of the new site — architecture, schema, rendering and launch-hygiene risks, KPIs, and a ranked risk register.</p>
+        <div class="pills"><span class="pill">Projected scorecard</span><span class="pill">Launch checklist</span><span class="pill">Risk register</span></div>
+        <span class="open">Open report →</span>
+      </a>
 
-    <!-- ===================== 03 OKR ===================== -->
-    <section class="block" id="s3">
-      <div class="bhead"><span class="ix">03</span><div><h2>OKR &amp; North Star</h2><p>What we're measured against</p></div></div>
-      <p>From the OKR kickoff (19 Jun 2026), this is framed as the quarter's most important objective — the foundation for growth into 2027.</p>
-      <div class="panel">
-        <ul>
-          <li><b>Objective</b> — launch a redesigned <span class="mono">checkoutgoal.com</span> that represents GOAL as the premium, ~$15M-run-rate company it is, and converts visitors into demo requests.</li>
-          <li><b>Committed KR</b> — ship V1 (website + segmented demo flow + SEO/GEO foundation) by the target date; an ideal V1 lands in ~30 days to coincide with the in-product marketplace launch.</li>
-          <li><b>North-Star metric</b> — increase monthly demo requests from a <b>5–10 baseline to 30–50+</b> (a 3–5× lift).</li>
-          <li><b>Grounding benchmark</b> — at the SaaS-median <b>1.5%</b> form-conversion rate, ~10,000 monthly visitors ≈ <b>150</b> demos — so the target is ambitious but realistic.</li>
-        </ul>
-      </div>
-      <p class="small">Prerequisite: establish a real traffic/conversion baseline on the current site (GA4 + Search Console) so the lift can be measured, not guessed. See <a href="seo-audit-current#s8">Current-Site Audit §8</a>.</p>
-    </section>
+      <a class="card green" href="content-strategy">
+        <span class="badge">03</span>
+        <div class="eb">Content · Strategy</div>
+        <h2>Content Strategy</h2>
+        <p>The plan for the on-domain Resources Hub — the strategic case, information architecture, copy &amp; schema playbook, and roadmap.</p>
+        <div class="pills"><span class="pill">IA + URLs</span><span class="pill">Copy playbook</span><span class="pill">Roadmap</span></div>
+        <span class="open">Open report →</span>
+      </a>
 
-    <!-- ===================== 04 UPDATE ===================== -->
-    <section class="block" id="s4">
-      <div class="bhead"><span class="ix">04</span><div><h2>What's in this update</h2><p>How the strategy report was reorganised</p></div></div>
-      <div class="tablecard">
-        <table class="gt">
-          <thead><tr><th style="width:34%">Change</th><th>Detail</th></tr></thead>
-          <tbody>
-            <tr><td><b>Added — Current-Site SEO Audit</b></td><td>The original current-state section, expanded into a full report with live evidence: verbatim head/headers, URL-probe matrix, multiple-H1 and duplicate-meta findings, S3/CloudFront hosting, and a graded scorecard.</td></tr>
-            <tr><td><b>Added — Redesign SEO Audit</b></td><td>A new pre-launch audit of the staging redesign: rendering &amp; launch-hygiene risks, programmatic-SEO guardrails, GEO readiness, the technical checklist, KPIs, and a risk register.</td></tr>
-            <tr><td><b>Split out — Content Strategy</b></td><td>The strategic case, information architecture, content &amp; copy playbook, and content roadmap, lifted into their own focused report.</td></tr>
-            <tr><td><b>Flagged — "exclusive" → "branded"</b></td><td>The OKR-kickoff decision to retire "exclusive" in market-facing copy is noted wherever the old templates still use it.</td></tr>
-            <tr><td><b>Open action</b></td><td>The redesign audit is a blueprint review until staging access is shared — re-run it as a live crawl against the staging URL to resolve the "to-confirm" items.</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+    </main>
 
-    <!-- ===================== 05 SOURCES ===================== -->
-    <section class="block" id="s5">
-      <div class="bhead"><span class="ix">05</span><div><h2>Sources</h2><p>What this is built on</p></div></div>
-      <div class="panel">
-        <ul style="margin-bottom:0;">
-          <li><b>OKR Kickoff | GOAL Website</b> — meeting transcript, 19 Jun 2026 (strategy, positioning, North-Star metric, tech stack).</li>
-          <li><span class="mono">checkoutgoal.com</span> — live crawl of homepage, <span class="mono">how-it-works.html</span>, <span class="mono">privacy-policy.html</span>, robots/sitemap/llms.txt probes, and response headers (June 2026).</li>
-          <li><b>GOAL Client Resources Strategy</b> — the source brief (IA, copy, schema, roadmap) underpinning the content report.</li>
-          <li><span class="mono">goal-followup-best-practices.vercel.app</span> &amp; <span class="mono">lead-export-guides.vercel.app</span> — the two existing off-domain guides referenced throughout.</li>
-        </ul>
-      </div>
-    </section>
+    <footer class="lfoot">GOAL Performance Marketing · Website redesign workstream · June 2026</footer>
 
-  </main>
-</div>
+  </div>
 </body>
 </html>
