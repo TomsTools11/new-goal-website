@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>GOAL — SEO Audit: Redesigned Site (pre-launch)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/report.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side">
+    <img class="logo" src="assets/goal-logo.png" alt="GOAL">
+    <div class="eb">Report 02 · Audit</div>
+    <h1>Redesign SEO Audit</h1>
+    <div class="who">Subject: <b>new GOAL site</b> (staging)<br>Blueprint &amp; pre-launch review<br>June 2026</div>
+    <nav>
+      <a href="#s1"><span class="dot"></span>Executive summary</a>
+      <a href="#s2"><span class="dot"></span>Scope &amp; method</a>
+      <a href="#s3"><span class="dot"></span>Projected scorecard</a>
+      <a href="#s4"><span class="dot"></span>Architecture &amp; URLs</a>
+      <a href="#s5"><span class="dot"></span>On-page &amp; schema</a>
+      <a href="#s6"><span class="dot"></span>AI / GEO readiness</a>
+      <a href="#s7"><span class="dot"></span>Programmatic SEO</a>
+      <a href="#s8"><span class="dot"></span>Rendering &amp; launch hygiene</a>
+      <a href="#s9"><span class="dot"></span>Analytics &amp; conversion</a>
+      <a href="#s10"><span class="dot"></span>Pre-launch checklist</a>
+      <a href="#s11"><span class="dot"></span>KPIs &amp; North Star</a>
+      <a href="#s12"><span class="dot"></span>Risk register</a>
+    </nav>
+    <div class="reports">
+      <div class="rl">Reports</div>
+      <a href="index">Overview</a>
+      <a href="seo-audit-current">01 · Current-site audit</a>
+      <a href="seo-audit-redesign" class="on">02 · Redesign audit</a>
+      <a href="content-strategy">03 · Content strategy</a>
+    </div>
+    <div class="foot">GOAL Performance Marketing<br>SEO audit · June 2026</div>
+  </aside>
+
+  <main class="main">
+
+    <div class="exec">
+      <p><b>The redesign is engineered to fix nearly every gap in the current site — on paper.</b> A premium, on-domain content layer (a <span class="mono">/resources/</span> hub), a Strapi CMS feeding programmatic landing pages, schema and an <span class="mono">llms.txt</span> baked in from the start, clean URLs on Vercel, and a segmented demo flow. If it ships as specified, GOAL moves from invisible to genuinely competitive in search and answer engines. But the grade is <i>conditional</i>: three things decide whether the design's SEO potential survives contact with production — <b>how the JS site renders</b>, <b>whether staging's <span class="mono">noindex</span>/password is cleanly removed at launch</b>, and <b>whether analytics ships on day one</b>. This report audits the blueprint and sets the pre-launch bar.</p>
+    </div>
+
+    <!-- ===================== 01 SUMMARY ===================== -->
+    <section class="block" id="s1">
+      <div class="bhead"><span class="ix">01</span><div><h2>Executive summary</h2><p>Strong by design — earned at launch</p></div></div>
+      <div class="gradewrap" style="margin:4px 0 22px;">
+        <div class="grade b">B</div>
+        <div class="gl"><b>Provisional — design-stage grade.</b><br>The architecture is a clear A-track. It is marked to <b>B</b> until the rendering, launch-hygiene, and analytics risks (§08, §12) are confirmed resolved on the live staging build. Re-grade against the real URL once access is granted.</div>
+      </div>
+      <div class="kgrid">
+        <div class="kc"><div class="v acc">▲</div><div class="k">On-domain content layer</div><div class="d">Resources hub + programmatic pages — vs. 0 today</div></div>
+        <div class="kc"><div class="v acc">✓</div><div class="k">Schema &amp; llms.txt baked in</div><div class="d">Structured + AI-readable from day one</div></div>
+        <div class="kc"><div class="v acc">✓</div><div class="k">Clean URLs on Vercel</div><div class="d"><span class="mono">cleanUrls</span> — descriptive, extensionless</div></div>
+        <div class="kc"><div class="v">3</div><div class="k">Launch-gating risks</div><div class="d">Rendering · staging hygiene · analytics</div></div>
+        <div class="kc"><div class="v">CSR?</div><div class="k">Rendering model to confirm</div><div class="d">Dark, interactive UI must still serve crawlable HTML</div></div>
+        <div class="kc"><div class="v">5–10 → 30–50+</div><div class="k">Demo-request North Star</div><div class="d">The OKR this build is measured against</div></div>
+      </div>
+      <p class="pull">The redesign doesn't need more SEO features. It needs the features it already has to render in HTML, ship with analytics, and lose the staging <span class="mono">noindex</span> on the way out the door.</p>
+    </section>
+
+    <!-- ===================== 02 SCOPE ===================== -->
+    <section class="block" id="s2">
+      <div class="bhead"><span class="ix">02</span><div><h2>Scope &amp; method</h2><p>A blueprint audit, by necessity</p></div></div>
+      <div class="callout warn"><span class="lab">Important — staging is not publicly accessible</span><p>The redesigned site lives on a <b>password-protected staging domain behind a private path</b>. It cannot be crawled from outside, so this is a <b>design-stage audit</b>: it assesses the SEO of the architecture as specified, plus a pre-launch readiness bar. It should be <b>re-run as a live technical crawl</b> the moment staging access is shared (an action already flagged in the OKR kickoff).</p></div>
+      <div class="panel">
+        <ul>
+          <li><b>Inputs:</b> the Client Resources Strategy (IA, copy, schema, internal-linking, and technical-SEO specs) and the technical direction surfaced in the OKR kickoff — Strapi CMS on a VPS, Supabase, a Vercel-hosted front end, dark/premium theme, interactive product components, schema + <span class="mono">llms.txt</span> pre-built, and programmatic carrier×state landing pages.</li>
+          <li><b>What this report evaluates:</b> whether that design is SEO-sound, what it will and won't achieve, and exactly which items must be verified or fixed <i>before</i> launch.</li>
+          <li><b>What it can't yet do:</b> measure real rendered HTML, Core Web Vitals, or live response headers — those require the staging URL.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== 03 SCORECARD ===================== -->
+    <section class="block" id="s3">
+      <div class="bhead"><span class="ix">03</span><div><h2>Projected scorecard</h2><p>Current site → redesign target</p></div></div>
+      <div class="legend">
+        <span><i style="background:#2BBF7A"></i> Designed &amp; on-track</span>
+        <span><i style="background:#F0A93B"></i> At risk — verify at launch</span>
+        <span><i style="background:#5b6775"></i> To confirm</span>
+      </div>
+      <div class="tablecard">
+        <table class="gt">
+          <thead><tr><th style="width:21%">Dimension</th><th style="width:19%">Current</th><th style="width:30%">Redesign target</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><b>Content footprint</b></td><td>0 indexable pages</td><td><span class="mono">/resources/</span> hub + guides + programmatic LPs</td><td><span class="tag green">Designed</span></td></tr>
+            <tr><td><b>robots.txt &amp; sitemap</b></td><td>Absent (403)</td><td>Auto-generated XML sitemap, referenced in robots</td><td><span class="tag green">Designed</span></td></tr>
+            <tr><td><b>Structured data</b></td><td>None</td><td>HowTo · Article+FAQ · Breadcrumb · Org · SoftwareApp</td><td><span class="tag green">Designed</span></td></tr>
+            <tr><td><b>Clean URLs</b></td><td><span class="mono">.html</span> only</td><td>Extensionless, descriptive (<span class="mono">cleanUrls</span>)</td><td><span class="tag green">Designed</span></td></tr>
+            <tr><td><b>OG / Twitter</b></td><td>None</td><td>Site defaults + per-guide branded share images</td><td><span class="tag green">Designed</span></td></tr>
+            <tr><td><b>Canonical</b></td><td>None</td><td>Self-referencing + canonical on filtered views</td><td><span class="tag green">Designed</span></td></tr>
+            <tr><td><b>llms.txt / GEO</b></td><td>Absent</td><td>Baked in; answer-first content + FAQ schema</td><td><span class="tag gray">Confirm curation</span></td></tr>
+            <tr><td><b>Analytics &amp; GSC</b></td><td>None</td><td>GA4 + Search Console + optional intent tool (RB2B)</td><td><span class="tag gray">Must ship</span></td></tr>
+            <tr><td><b>Rendering</b></td><td>Static HTML</td><td>JS framework, dark + interactive components</td><td><span class="tag amber">At risk — SSR/SSG</span></td></tr>
+            <tr><td><b>Staging hygiene</b></td><td>n/a</td><td><span class="mono">noindex</span> + password on staging only</td><td><span class="tag amber">Remove at launch</span></td></tr>
+            <tr><td><b>Positioning / copy</b></td><td>"exclusive"</td><td>"branded" — branded visibility / branded leads</td><td><span class="tag gray">Migrate copy</span></td></tr>
+            <tr><td><b>Marketplace messaging</b></td><td>n/a</td><td>New product launching <i>inside</i> GOAL (July)</td><td><span class="tag gray">Plan section</span></td></tr>
+            <tr><td><b>Conversion path</b></td><td>Slack-only intake</td><td>Segmented demo flow → Cal.com + Close + Slack</td><td><span class="tag green">Designed</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===================== 04 ARCHITECTURE ===================== -->
+    <section class="block" id="s4">
+      <div class="bhead"><span class="ix">04</span><div><h2>Architecture &amp; URLs</h2><p>The IA is right; protect it</p></div></div>
+      <p>The proposed information architecture is a <b>shallow, two-clicks-deep hub-and-spoke</b> — exactly what content SEO wants. Descriptive, format-agnostic URLs; a hub that links down to categories and up from every guide; a 301 discipline for anything that moves.</p>
+      <div class="tree">
+<span class="root">checkoutgoal.com/resources/</span>            <span class="note"># hub — landing/index</span>
+├─ <span class="b">/resources/playbooks/</span>          <span class="note"># strategy &amp; best practices</span>
+├─ <span class="b">/resources/guides/</span>             <span class="note"># CRM &amp; data how-tos</span>
+├─ <span class="b">/resources/verticals/</span>          <span class="note"># by line of business (programmatic)</span>
+├─ <span class="b">/resources/product/</span>            <span class="note"># using GOAL (help/docs)</span>
+└─ <span class="b">/resources/glossary/</span>           <span class="note"># long-tail + AI citations</span>
+      </div>
+      <div class="callout win"><span class="lab">Strengths</span><p>Clean URLs are already configured on Vercel (<span class="mono">cleanUrls</span>). The hub-and-spoke keeps crawl depth low, the breadcrumb plan gives every page an "up" link, and the "never change a published URL" rule prevents the slow equity bleed that kills most content libraries.</p></div>
+      <h3>Watch-items</h3>
+      <ul>
+        <li><b>Canonical on filtered/paginated views.</b> Once the hub has category filters or pagination, each variant needs a self-referencing canonical (or a consolidated index) to avoid splitting signals — the one IA risk that scales with the library.</li>
+        <li><b>Breadcrumb + <span class="mono">BreadcrumbList</span> parity.</b> Visual breadcrumb and JSON-LD breadcrumb must match the real URL path on every template.</li>
+        <li><b>Trailing-slash consistency.</b> Pick one convention and 301 the other; don't let <span class="mono">/resources</span> and <span class="mono">/resources/</span> both resolve.</li>
+      </ul>
+    </section>
+
+    <!-- ===================== 05 ON-PAGE & SCHEMA ===================== -->
+    <section class="block" id="s5">
+      <div class="bhead"><span class="ix">05</span><div><h2>On-page &amp; structured data</h2><p>Templates that are right by default</p></div></div>
+      <p>The redesign templatises the on-page basics the current site lacks: <b>title ≤ 60 chars</b>, <b>meta 150–160</b>, exactly one <b>H1</b>, searcher-term-first then "| GOAL". Because these live in reusable Hub / Guide / Card templates, every new page inherits correct SEO rather than relying on an author to remember it. That's the single most durable on-page win in the whole plan.</p>
+      <p>Schema coverage is well-matched to page type — and broader than the current site's zero:</p>
+      <div class="tablecard">
+        <table class="gt">
+          <thead><tr><th style="width:30%">Page type</th><th>Structured data</th></tr></thead>
+          <tbody>
+            <tr><td>CRM / data guides</td><td class="mc">HowTo</td></tr>
+            <tr><td>Playbooks &amp; verticals</td><td class="mc">Article + FAQPage</td></tr>
+            <tr><td>Every resource page</td><td class="mc">BreadcrumbList</td></tr>
+            <tr><td>Site-wide</td><td class="mc">Organization + SoftwareApplication</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout key"><span class="lab">Recommended additions</span><p>Extend the schema set as features land: <b>Offer/AggregateOffer</b> for the pricing tiers, <b>Review / AggregateRating</b> once video testimonials are permissioned (the social-proof work from the kickoff), and <b>VideoObject</b> for the client-led webinar and testimonial clips. Each unlocks a rich result the brochure can't earn. Validate every template in Google's Rich Results Test before it ships.</p></div>
+      <p class="small">Full paste-ready copy, title/meta/H1 patterns, and JSON-LD snippets are in the <a href="content-strategy#s3">Content Strategy playbook</a>. Remember the <b>"exclusive" → "branded"</b> copy swap before publish.</p>
+    </section>
+
+    <!-- ===================== 06 GEO ===================== -->
+    <section class="block" id="s6">
+      <div class="bhead"><span class="ix">06</span><div><h2>AI / answer-engine readiness</h2><p>Built for citation, not just ranking</p></div></div>
+      <p>This is where the redesign genuinely leads. An <span class="mono">llms.txt</span> is pre-built, and the content method (answer-first sentences, named numbers, FAQ blocks, HowTo steps) is exactly what ChatGPT, Perplexity, and Google AI Overviews lift. Against a current site with <b>zero</b> AI visibility, this is a step-change.</p>
+      <div class="panel">
+        <ul>
+          <li><b>Keep <span class="mono">llms.txt</span> curated, not auto-dumped.</b> It should point engines at the canonical guides and the glossary — a short, intentional map, refreshed as the library grows.</li>
+          <li><b>Entity authority.</b> Consistent <span class="mono">Organization</span> markup with <span class="mono">sameAs</span> (LinkedIn, Crunchbase, socials) plus a glossary defining GOAL's terms gives engines a reason to cite the brand by name.</li>
+          <li><b>FAQPage everywhere it's honest.</b> Build FAQ blocks from the guide's real questions; these are disproportionately quoted in AI answers.</li>
+          <li><b>Don't let JS hide it.</b> GEO depends entirely on §08 — if the answer-first content isn't in the server-rendered HTML, no model will ever see it.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== 07 PROGRAMMATIC ===================== -->
+    <section class="block" id="s7">
+      <div class="bhead"><span class="ix">07</span><div><h2>Programmatic SEO at scale</h2><p>Strapi carrier × state pages — the big lever and the big risk</p></div></div>
+      <p>The plan to spin up a landing page per <b>carrier × state</b> from Strapi is the redesign's largest organic-upside bet — and its largest risk. Done well, it captures enormous long-tail intent ("auto insurance leads in Texas", "[carrier] agent leads"). Done carelessly, it generates thousands of near-duplicate, thin pages that dilute the domain and invite a quality demotion.</p>
+      <div class="dgrid">
+        <div class="dcol good">
+          <span class="dtag">Upside</span>
+          <h4>Long-tail capture</h4>
+          <p class="small" style="margin-top:8px;">One template, hundreds of high-intent queries. Each page can link up to the relevant vertical guide and across to the demo — turning search into pipeline at scale.</p>
+        </div>
+        <div class="dcol bad">
+          <span class="dtag">Risk</span>
+          <h4>Thin / duplicate at scale</h4>
+          <p class="small" style="margin-top:8px;">Templated pages that differ only by a place-name are the classic doorway-page trap. Index bloat slows crawling of the pages that matter.</p>
+        </div>
+      </div>
+      <div class="callout warn"><span class="lab">Guardrails — apply before publishing the set</span><p><b>1.</b> Each page needs genuinely unique data (local stats, carrier specifics), not just a swapped noun. <b>2.</b> Start small and measure; <span class="mono">noindex</span> variants that can't be made substantive. <b>3.</b> Segment programmatic URLs into their own sitemap so you can watch indexation rate. <b>4.</b> Canonical correctly; never let two near-identical pages compete. <b>5.</b> Roll out in batches — don't drop 2,000 pages on day one.</p></div>
+    </section>
+
+    <!-- ===================== 08 RENDERING ===================== -->
+    <section class="block" id="s8">
+      <div class="bhead"><span class="ix">08</span><div><h2>Rendering &amp; launch hygiene</h2><p>The two things most likely to sink the launch</p></div></div>
+      <h3>Rendering — the critical dependency</h3>
+      <p>The new site is a dark-themed, JavaScript-driven experience with interactive product components. SEO and GEO both depend on one question: <b>is the content in the HTML the server returns, or is it painted by client-side JS after load?</b> If it's client-rendered, crawlers and AI models may see an empty shell — and every schema, llms.txt, and copy advantage above is wasted.</p>
+      <div class="callout key"><span class="lab">Requirement</span><p>Render resource and content pages with <b>SSR or static generation</b> (on Vercel, Next.js SSG/ISR is the natural fit). Strapi content must be fetched at build/request time and embedded in the initial HTML — not hydrated client-side. Verify with "View Source" (content present?) and Search Console's URL Inspection (rendered HTML matches?). Keep client JS on content pages minimal for LCP/INP.</p></div>
+      <h3>Launch hygiene — the avoidable disaster</h3>
+      <p>Staging is correctly protected by a password and should carry <span class="mono">noindex</span>. The number-one launch failure mode for redesigns is shipping that <span class="mono">noindex</span> — or a <span class="mono">Disallow: /</span> — straight into production and quietly de-indexing the whole site. Make removal an explicit, verified launch step.</p>
+      <ul>
+        <li>Remove <span class="mono">noindex</span> and the staging password; confirm production <span class="mono">robots.txt</span> does not contain <span class="mono">Disallow: /</span>.</li>
+        <li>301-redirect the two <span class="mono">*.vercel.app</span> guide URLs (and any old <span class="mono">.html</span> URLs) to their new homes; keep slugs stable.</li>
+        <li>Set canonicals to the production domain; submit the sitemap in Search Console &amp; Bing; request indexing on key pages.</li>
+        <li>Spot-check a sample of live pages for rendered content, status 200, and correct canonical before announcing.</li>
+      </ul>
+    </section>
+
+    <!-- ===================== 09 ANALYTICS & CONVERSION ===================== -->
+    <section class="block" id="s9">
+      <div class="bhead"><span class="ix">09</span><div><h2>Analytics &amp; the conversion path</h2><p>Measure the North Star; route the demand</p></div></div>
+      <h3>Measurement (ship on day one)</h3>
+      <p>The current site is flying blind; the redesign must not. <b>GA4</b> and <b>Search Console</b> are non-negotiable at launch, with <b>event tracking on the demo flow</b> (start, step completion, submission) so the demo-request KPI has a real denominator. An intent tool such as <b>RB2B</b> can layer on de-anonymised account visibility for sales. Without this on day one, the OKR can't be measured — only guessed at.</p>
+      <h3>The demo flow &amp; marketplace</h3>
+      <p>The segmented demo flow (qualifying fields → Cal.com booking → Close + Slack) is a strong, low-friction conversion design — let prospects book instantly rather than waiting on manual Slack routing. SEO watch-items:</p>
+      <div class="panel">
+        <ul>
+          <li><b>The demo page must have crawlable content</b>, not just a form — a real H1, value copy, and ideally <span class="mono">Service</span>/<span class="mono">Offer</span> schema, so it can rank for "book a demo / GOAL pricing" intent.</li>
+          <li><b>Marketplace messaging (launching July).</b> The new in-product marketplace needs its own planned section/URL and schema, with copy aligned to the "branded leads + curated marketplace" narrative — so the site doesn't market only the clicks product.</li>
+          <li><b>Form isn't the only content.</b> Keep the page indexable independent of the JS form widget (ties back to §08).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== 10 CHECKLIST ===================== -->
+    <section class="block" id="s10">
+      <div class="bhead"><span class="ix">10</span><div><h2>Pre-launch SEO checklist</h2><p>The standard every new page must pass</p></div></div>
+      <div class="tablecard">
+        <table class="gt">
+          <thead><tr><th style="width:24%">Element</th><th>Standard</th></tr></thead>
+          <tbody>
+            <tr><td><b>Title tag</b></td><td>Unique, ≤ 60 chars, searcher-term first, "| GOAL" suffix. No leading whitespace (the current homepage has one).</td></tr>
+            <tr><td><b>Meta description</b></td><td>Unique, 150–160 chars, benefit + proof + soft CTA. Never duplicate the H1 (the current site's mistake).</td></tr>
+            <tr><td><b>H1</b></td><td>Exactly one per page; matches search intent; logical H2/H3 nesting; no empty headings.</td></tr>
+            <tr><td><b>Open Graph + Twitter</b></td><td><span class="mono">og:title/description/image/url/type</span> + <span class="mono">twitter:card=summary_large_image</span>. Each guide gets a branded share image.</td></tr>
+            <tr><td><b>Canonical</b></td><td>Self-referencing on every page; one canonical per filtered/paginated view.</td></tr>
+            <tr><td><b>Structured data</b></td><td>HowTo (guides), Article+FAQ (playbooks/verticals), BreadcrumbList (all), Organization + SoftwareApplication (site-wide). Validate before ship.</td></tr>
+            <tr><td><b>robots.txt &amp; sitemap</b></td><td>Both present; auto-include new URLs; reference the sitemap in robots; segment programmatic URLs.</td></tr>
+            <tr><td><b>Rendering</b></td><td>Content in server-rendered HTML (SSR/SSG); confirmed via View Source + URL Inspection.</td></tr>
+            <tr><td><b>Images</b></td><td>Descriptive alt; WebP/AVIF; explicit width/height; lazy-load below the fold.</td></tr>
+            <tr><td><b>Internal links</b></td><td>3–6 contextual links/guide, ≥ 1 to a conversion page; varied anchors; breadcrumb up to hub.</td></tr>
+            <tr><td><b>Performance</b></td><td>Static or server-rendered; minimal client JS on content pages; fast LCP, low CLS/INP.</td></tr>
+            <tr><td><b>Mobile / a11y</b></td><td>≥ 16px body text, ≥ 44px touch targets, sufficient contrast (mind the dark theme), keyboard-navigable.</td></tr>
+            <tr><td><b>Launch hygiene</b></td><td>Remove staging <span class="mono">noindex</span> + password; no <span class="mono">Disallow: /</span>; 301s in place; analytics live.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===================== 11 KPIS ===================== -->
+    <section class="block" id="s11">
+      <div class="bhead"><span class="ix">11</span><div><h2>KPIs &amp; North Star</h2><p>What success looks like</p></div></div>
+      <div class="kgrid">
+        <div class="kc"><div class="v acc">5–10 → 30–50+</div><div class="k">Monthly demo requests</div><div class="d">The committed OKR — a 3–5× lift</div></div>
+        <div class="kc"><div class="v">1.5%</div><div class="k">Benchmark form-conversion</div><div class="d">SaaS median — 10k visitors ≈ 150 demos</div></div>
+        <div class="kc"><div class="v">~0 → grow</div><div class="k">Indexed resource pages</div><div class="d">Library &amp; crawlability from a zero base</div></div>
+      </div>
+      <div class="tablecard" style="margin-top:14px;">
+        <table class="gt">
+          <thead><tr><th style="width:34%">KPI</th><th>What it tells us</th><th style="width:16%">Cadence</th></tr></thead>
+          <tbody>
+            <tr><td><b>Indexed resource pages</b></td><td>Crawlability &amp; library growth (from ~0 today)</td><td>Monthly</td></tr>
+            <tr><td><b>Organic sessions to <span class="mono">/resources/</span></b></td><td>Acquisition from non-branded search</td><td>Monthly</td></tr>
+            <tr><td><b>Resource → demo CTA rate</b></td><td>Whether content actually feeds pipeline</td><td>Monthly</td></tr>
+            <tr><td><b>Keyword rankings (target queries)</b></td><td>Authority gain on operational terms</td><td>Monthly</td></tr>
+            <tr><td><b>AI-answer citations / mentions</b></td><td>Answer-engine visibility (GEO)</td><td>Quarterly</td></tr>
+            <tr><td><b>Guide requests received</b></td><td>Demand signal that sets the backlog</td><td>Ongoing</td></tr>
+            <tr><td><b>Guide engagement vs. bind rate</b></td><td>The retention / success dividend</td><td>Quarterly</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout key"><span class="lab">North Star</span><p>Increase monthly demo requests from a <b>5–10 baseline to 30–50+</b>. At the SaaS-median 1.5% form-conversion rate, ~10,000 monthly visitors yields ~150 demos — so the target is both ambitious and grounded. Establishing the baseline on the current site (§08 of the <a href="seo-audit-current#s8">current-site audit</a>) is the prerequisite for measuring the lift honestly.</p></div>
+    </section>
+
+    <!-- ===================== 12 RISK ===================== -->
+    <section class="block" id="s12">
+      <div class="bhead"><span class="ix">12</span><div><h2>Risk register</h2><p>Ranked, with mitigations</p></div></div>
+      <div class="tablecard">
+        <table class="gt">
+          <thead><tr><th style="width:30%">Risk</th><th style="width:14%">Severity</th><th>Mitigation</th></tr></thead>
+          <tbody>
+            <tr><td>Client-side rendering hides content from crawlers &amp; AI</td><td><span class="tag red">Critical</span></td><td>SSR/SSG (Next.js on Vercel); content in initial HTML; verify via View Source + URL Inspection.</td></tr>
+            <tr><td>Staging <span class="mono">noindex</span> / <span class="mono">Disallow:/</span> ships to production</td><td><span class="tag red">Critical</span></td><td>Explicit, verified launch step to remove both; post-deploy spot-check of robots + sample pages.</td></tr>
+            <tr><td>No analytics live at launch</td><td><span class="tag amber">High</span></td><td>GA4 + GSC + Bing on day one; demo-flow event tracking; baseline on current site first.</td></tr>
+            <tr><td>Programmatic pages thin / duplicate at scale</td><td><span class="tag amber">High</span></td><td>Unique data per page; <span class="mono">noindex</span> thin variants; batched rollout; segmented sitemap; canonical.</td></tr>
+            <tr><td>Migrated guides lose existing equity</td><td><span class="tag amber">Medium</span></td><td>301 the <span class="mono">*.vercel.app</span> + old URLs; stable slugs; submit in sitemap; monitor in GSC.</td></tr>
+            <tr><td>"Exclusive" copy contradicts new positioning</td><td><span class="tag amber">Medium</span></td><td>Swap to "branded" across templates, titles, and metas before publish.</td></tr>
+            <tr><td>Marketplace (July) not reflected in messaging/URLs</td><td><span class="tag amber">Medium</span></td><td>Plan a marketplace section + schema; align to the branded-leads + curated-marketplace narrative.</td></tr>
+            <tr><td>Missing canonical on filtered/paginated lists</td><td><span class="tag gray">Watch</span></td><td>Self-referencing canonicals; consolidate or <span class="mono">rel=next/prev</span>; one convention for trailing slash.</td></tr>
+            <tr><td>Dark theme contrast / a11y on content</td><td><span class="tag gray">Watch</span></td><td>Meet WCAG contrast; consider the light-mode option raised in the kickoff for older accounts.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small">Re-run this section as a live crawl once staging access is granted — most "At risk / To confirm" items resolve to a clean yes/no in minutes against the real URL.</p>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>

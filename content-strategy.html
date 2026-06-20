@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>GOAL — Content Strategy (Resources Hub)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/report.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side">
+    <img class="logo" src="assets/goal-logo.png" alt="GOAL">
+    <div class="eb">Report 03 · Content</div>
+    <h1>Content Strategy</h1>
+    <div class="who">Resources Hub — strategy, IA, copy &amp; roadmap<br>Source: Client Resources Strategy<br>June 2026</div>
+    <nav>
+      <a href="#s1"><span class="dot"></span>The strategic case</a>
+      <a href="#s2"><span class="dot"></span>Information architecture</a>
+      <a href="#s3"><span class="dot"></span>Content &amp; copy playbook</a>
+      <a href="#s4"><span class="dot"></span>Content roadmap</a>
+    </nav>
+    <div class="reports">
+      <div class="rl">Reports</div>
+      <a href="index">Overview</a>
+      <a href="seo-audit-current">01 · Current-site audit</a>
+      <a href="seo-audit-redesign">02 · Redesign audit</a>
+      <a href="content-strategy" class="on">03 · Content strategy</a>
+    </div>
+    <div class="foot">GOAL Performance Marketing<br>Content strategy · June 2026</div>
+  </aside>
+
+  <main class="main">
+
+      <div class="exec">
+        <p><b>The content strategy GOAL already has, made repeatable.</b> GOAL produces excellent client resources — a 30-day follow-up playbook and a CRM data-export hub — but they live on throwaway <span class="mono">*.vercel.app</span> domains, building authority GOAL doesn't market. This report is the content half of the redesign: <b>the strategic case</b> for an on-domain Resources Hub, the <b>information architecture</b> that holds it, the <b>copy &amp; schema playbook</b> that makes each guide found and trusted, and the <b>roadmap</b> that orders what to publish. It is the source material for the new <span class="mono">/resources/</span> section and the input that turns the site from a brochure into a lead-gen arm.</p>
+      </div>
+
+<section class="block" id="s1">
+      <div class="bhead"><span class="ix">01</span><div><h2>The strategic case</h2><p>Why a resources section, and why now</p></div></div>
+
+      <h3>The "stranded authority" problem</h3>
+      <p>GOAL's best content currently builds equity for throwaway domains instead of the brand. The redesign is the one-time opportunity to bring it home, where it compounds.</p>
+      <div class="dgrid">
+        <div class="dcol bad">
+          <span class="dtag">Today</span>
+          <h4>Authority leaks off-domain</h4>
+          <div class="node dom">checkoutgoal.com — brochure only</div>
+          <div class="flow">— no link —</div>
+          <div class="node off">goal-followup-best-practices.vercel.app</div>
+          <div class="node off">lead-export-guides.vercel.app</div>
+          <p class="small" style="margin-top:12px;">Guides rank (if at all) for a domain GOAL doesn't market. No internal links, no shared analytics, no path to a demo.</p>
+        </div>
+        <div class="dcol good">
+          <span class="dtag">After redesign</span>
+          <h4>Authority compounds on-brand</h4>
+          <div class="node dom">checkoutgoal.com/resources/</div>
+          <div class="flow">↳ links up &amp; down</div>
+          <div class="node">/resources/playbooks/30-day-lead-follow-up</div>
+          <div class="node">/resources/guides/export-lead-data</div>
+          <p class="small" style="margin-top:12px;">Every guide strengthens the domain that ranks for "insurance leads," cross-links to money pages, carries a demo CTA.</p>
+        </div>
+      </div>
+
+      <h3>Why content fits GOAL's buyer</h3>
+      <div class="panel">
+        <ul>
+          <li><b>The buyer is mid-task, not mid-funnel.</b> Agency owners search for fixes — "my internet leads don't answer," "how do I export bind data to AgencyZoom." GOAL's product is the answer; the content demonstrates it.</li>
+          <li><b>Trust is the whole sale.</b> A market burned by shared-lead aggregators responds to a library that openly teaches follow-up discipline and clean data hygiene — "partner," not "vendor." It reinforces the existing "old way vs. the GOAL way" narrative.</li>
+          <li><b>AI assistants are the new top of funnel.</b> Owners ask ChatGPT, Perplexity, and Google AI overviews these operational questions. Structured, schema-marked guides are how GOAL becomes the cited source.</li>
+          <li><b>Resources reduce churn.</b> Clients who follow the cadence and export data cleanly convert more and stay. Content is a retention investment with a marketing dividend.</li>
+        </ul>
+      </div>
+
+      <p class="pull">GOAL doesn't need to invent a content strategy. It needs to stop hiding the one it already has.</p>
+    </section>
+
+<section class="block" id="s2">
+      <div class="bhead"><span class="ix">02</span><div><h2>Information architecture</h2><p>A shallow, scannable hub-and-spoke</p></div></div>
+
+      <h3>URL &amp; page structure</h3>
+      <div class="tree">
+<span class="root">checkoutgoal.com/resources/</span>            <span class="note"># Resources Hub — the landing/index</span>
+├─ <span class="b">/resources/playbooks/</span>          <span class="note"># strategy &amp; best practices</span>
+│   ├─ …/30-day-lead-follow-up        <span class="note"># ← migrate existing guide</span>
+│   ├─ …/speed-to-lead
+│   └─ …/aged-lead-revival
+├─ <span class="b">/resources/guides/</span>             <span class="note"># CRM &amp; data how-tos</span>
+│   ├─ …/export-lead-data             <span class="note"># ← migrate existing hub</span>
+│   ├─ …/export/agencyzoom
+│   ├─ …/export/ricochet
+│   └─ …/export/lead-manager
+├─ <span class="b">/resources/verticals/</span>          <span class="note"># by line of business</span>
+│   ├─ …/auto-insurance-leads
+│   ├─ …/home-insurance-leads
+│   └─ …/medicare-leads
+├─ <span class="b">/resources/product/</span>            <span class="note"># using GOAL (help/docs)</span>
+│   ├─ …/quotefunnel-setup
+│   └─ …/reading-your-reports
+└─ <span class="b">/resources/glossary/</span>           <span class="note"># definitions — long-tail + AI citations</span>
+    └─ …/[term]
+      </div>
+
+      <div class="callout key">
+        <span class="lab">IA principles</span>
+        <p><b>1.</b> Keep it two clicks deep — hub → guide. <b>2.</b> URLs describe content, not format. <b>3.</b> Never change a published URL; 301-redirect if it moves. <b>4.</b> Every guide links up to its category/hub and across to 2–3 siblings + one money page.</p>
+      </div>
+
+      <h3>Hub page anatomy</h3>
+      <div class="panel">
+        <ol style="padding-left:18px;margin-bottom:0;">
+          <li><b>Hero</b> — headline + one-line promise + optional search.</li>
+          <li><b>Featured / start-here</b> — the follow-up playbook, given pride of place.</li>
+          <li><b>Category sections</b> — Playbooks · Guides · By Line of Business · Using GOAL, each a card grid (reuse the proven export-hub card pattern).</li>
+          <li><b>"Don't see what you need?"</b> request hook (proven engagement device from the export hub).</li>
+          <li><b>Demo CTA band</b> — consistent conversion path at the bottom of every resource page.</li>
+        </ol>
+      </div>
+      <p class="small">The <b>GOAL Guides Hub</b> design reference (Claude Design) is intended as the visual spec for this hub page. It serves as the visual spec to implement for the Resources hub template above.</p>
+    </section>
+
+<section class="block" id="s3">
+      <div class="bhead"><span class="ix">03</span><div><h2>Content &amp; copy playbook</h2><p>The words, written to be found and trusted</p></div></div>
+
+      <div class="callout warn"><span class="lab">Messaging update — OKR kickoff, 19 Jun 2026</span><p>Leadership has decided to retire <b>“exclusive”</b> in market-facing copy in favour of <b>“branded”</b> — "branded visibility" and "branded leads" — because <i>exclusive</i> is hard to substantiate and invites EverQuote-style comparison. The paste-ready copy and query targets below predate that call; swap the term on migration (e.g. "Generate your own <s>exclusive</s> branded leads", "Why Branded Leads Beat Shared Leads"). Keep the underlying proof and cadence intact.</p></div>
+
+      <h3>3.1 — Resources Hub copy (paste-ready)</h3>
+      <div class="cset">
+        <div class="ch">/resources/ — hero &amp; intro</div>
+        <div class="cb">
+          <div class="field"><span class="fk">H1</span><span class="fv"><span class="ex">Run a better insurance agency, lead by lead.</span></span></div>
+          <div class="field"><span class="fk">Sub / promise</span><span class="fv">Playbooks, CRM guides, and benchmarks from the GOAL team — the same tactics our highest-performing agencies use to turn exclusive leads into bound policies.</span></div>
+          <div class="field"><span class="fk">Featured eyebrow</span><span class="fv mono">START HERE</span></div>
+          <div class="field"><span class="fk">Featured card</span><span class="fv"><span class="ex">The 30-Day Lead Follow-Up Playbook</span> — The 60+ touch cadence that lifts bind rates 3–5× the industry median. Steal the scripts.</span></div>
+          <div class="field"><span class="fk">Request hook</span><span class="fv"><span class="ex">Don't see what you need?</span> Tell us the guide, CRM, or topic you're after and we'll build it. → request a guide</span></div>
+          <div class="field"><span class="fk">Closing CTA</span><span class="fv"><span class="ex">Generate your own exclusive leads.</span> See GOAL in action → Book a demo</span></div>
+        </div>
+      </div>
+
+      <h3>3.2 — The guide-card formula</h3>
+      <p>Reuse the export hub's scannable card pattern across every category. Five fixed slots — never free-form.</p>
+      <div class="cset">
+        <div class="ch">card = badge · title · type · one-line value · action</div>
+        <div class="cb">
+          <div class="field"><span class="fk">Badge</span><span class="fv">2–3 letter monogram or LOB tag (<span class="mono">AZ</span>, <span class="mono">RC</span>, <span class="mono">LM</span>; or AUTO / HOME). Proven in the export hub.</span></div>
+          <div class="field"><span class="fk">Title</span><span class="fv">The thing, named plainly — "Export GOAL leads from AgencyZoom."</span></div>
+          <div class="field"><span class="fk">Type tag</span><span class="fv mono">PLAYBOOK · GUIDE · BENCHMARK · CHECKLIST · GLOSSARY</span></div>
+          <div class="field"><span class="fk">Value line</span><span class="fv">One sentence on the payoff or time cost — "Pull quote &amp; bind data in under 2 minutes."</span></div>
+          <div class="field"><span class="fk">Action</span><span class="fv"><span class="ex">Open guide →</span> (consistent verb on every card)</span></div>
+        </div>
+      </div>
+
+      <h3>3.3 — Title, meta &amp; H1 templates by guide type</h3>
+      <p>Targets: <b>title ≤ 60 chars</b>, <b>meta 150–160 chars</b>, exactly one <b>H1</b>. Lead with the searcher's words, then the GOAL brand.</p>
+      <div class="tablecard">
+        <table class="gt">
+          <thead><tr><th style="width:18%">Type</th><th style="width:38%">Title-tag pattern</th><th>Meta-description pattern</th></tr></thead>
+          <tbody>
+            <tr><td><b>Playbook</b></td><td class="mc">[Outcome] in [timeframe]: The [Topic] Playbook | GOAL</td><td>Verb-led, benefit + proof + light CTA. "Follow the exact 30-day cadence our top agencies use to bind 3–5× more internet leads. Scripts and checklists included — free from GOAL."</td></tr>
+            <tr><td><b>CRM / data</b></td><td class="mc">How to Export [Data] from [CRM] | GOAL Guides</td><td>Task + speed + reassurance. "Step-by-step: export your GOAL quote &amp; bind data from AgencyZoom in under 2 minutes. Screenshots for every step, no developer needed."</td></tr>
+            <tr><td><b>Vertical</b></td><td class="mc">[Line] Insurance Leads: A Guide for Agencies | GOAL</td><td>Audience + promise. "What actually works for converting auto insurance leads — pricing, speed-to-contact, and follow-up tuned to how auto shoppers behave. From the GOAL team."</td></tr>
+            <tr><td><b>Glossary</b></td><td class="mc">What Is [Term]? Definition &amp; Examples | GOAL</td><td>Definition-first for AI/snippets. "[Term] explained in plain English for insurance agencies, with an example and how it affects your lead ROI."</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Worked example — migrating the existing follow-up guide</h4>
+      <div class="cset">
+        <div class="ch">/resources/playbooks/30-day-lead-follow-up</div>
+        <div class="cb">
+          <div class="field"><span class="fk">Title</span><span class="fv"><span class="ex">Insurance Lead Follow-Up: The 30-Day Playbook | GOAL</span> <span class="small">(54 chars)</span></span></div>
+          <div class="field"><span class="fk">Meta</span><span class="fv">Most insurance leads convert between day 12 and 30 — if you keep showing up. Steal GOAL's 60+ touch cadence, call scripts, and daily checklist to bind 3–5× more. <span class="small">(156 chars)</span></span></div>
+          <div class="field"><span class="fk">H1</span><span class="fv"><span class="ex">The 30-Day Lead Follow-Up Playbook</span></span></div>
+          <div class="field"><span class="fk">Queries</span><span class="fv mono">how to follow up on insurance leads · internet insurance lead follow up · insurance lead cadence</span></div>
+        </div>
+      </div>
+
+      <h4>Worked example — a CRM export guide</h4>
+      <div class="cset">
+        <div class="ch">/resources/guides/export/agencyzoom</div>
+        <div class="cb">
+          <div class="field"><span class="fk">Title</span><span class="fv"><span class="ex">How to Export GOAL Leads from AgencyZoom | GOAL Guides</span> <span class="small">(53 chars)</span></span></div>
+          <div class="field"><span class="fk">Meta</span><span class="fv">Export your GOAL quote and bind data from AgencyZoom in under two minutes. A clear, screenshot-by-screenshot walkthrough — no spreadsheet gymnastics, no developer needed. <span class="small">(159 chars)</span></span></div>
+          <div class="field"><span class="fk">H1</span><span class="fv"><span class="ex">Export your GOAL lead data from AgencyZoom</span></span></div>
+          <div class="field"><span class="fk">Queries</span><span class="fv mono">agencyzoom export leads · download lead data agencyzoom · agencyzoom quote bind report</span></div>
+        </div>
+      </div>
+
+      <h3>3.4 — Structured data (schema) per page type</h3>
+      <div class="code">
+        <div class="ch"><span class="t">HowTo — for CRM / data guides</span><span class="tg">JSON-LD · &lt;head&gt;</span></div>
+        <pre><span class="c">// drop into export/CRM guide templates; fill steps programmatically</span>
+{
+  <span class="b">"@context"</span>: "https://schema.org",
+  <span class="b">"@type"</span>: <span class="m">"HowTo"</span>,
+  <span class="b">"name"</span>: "How to export GOAL leads from AgencyZoom",
+  <span class="b">"totalTime"</span>: "PT2M",
+  <span class="b">"step"</span>: [
+    { "@type": "HowToStep", "name": "Open Reports",
+      "text": "In AgencyZoom, go to Reports &gt; Lead Source." },
+    { "@type": "HowToStep", "name": "Filter to GOAL",
+      "text": "Set the lead source filter to GOAL and your date range." },
+    { "@type": "HowToStep", "name": "Export to CSV",
+      "text": "Click Export and download the quote &amp; bind columns." }
+  ],
+  <span class="b">"publisher"</span>: { "@type": "Organization", "name": "GOAL",
+    "url": "https://checkoutgoal.com" }
+}</pre>
+      </div>
+      <div class="code">
+        <div class="ch"><span class="t">Article + FAQ — for playbooks &amp; verticals</span><span class="tg">JSON-LD · &lt;head&gt;</span></div>
+        <pre>{
+  <span class="b">"@context"</span>: "https://schema.org",
+  <span class="b">"@type"</span>: <span class="m">"Article"</span>,
+  <span class="b">"headline"</span>: "The 30-Day Lead Follow-Up Playbook",
+  <span class="b">"author"</span>:    { "@type": "Organization", "name": "GOAL" },
+  <span class="b">"publisher"</span>: { "@type": "Organization", "name": "GOAL",
+    "logo": { "@type": "ImageObject",
+      "url": "https://checkoutgoal.com/logo.png" } }
+}
+<span class="c">// pair with an FAQPage block built from the guide's real questions:</span>
+{ <span class="b">"@type"</span>: <span class="m">"FAQPage"</span>, <span class="b">"mainEntity"</span>: [
+  { "@type": "Question",
+    "name": "How many times should I call a new insurance lead?",
+    "acceptedAnswer": { "@type": "Answer",
+      "text": "21+ attempts in week one; 60+ touches across 30 days." } }
+]}</pre>
+      </div>
+      <p class="small">Site-wide: one <span class="mono">Organization</span> block and a <span class="mono">SoftwareApplication</span> block on the homepage, plus a <span class="mono">BreadcrumbList</span> on every resource page (Resources → Category → Guide).</p>
+
+      <h3>3.5 — Internal linking plan</h3>
+      <div class="tablecard">
+        <table class="gt">
+          <thead><tr><th style="width:16%">Direction</th><th style="width:34%">From → To</th><th>Anchor-text guidance</th></tr></thead>
+          <tbody>
+            <tr><td><b>Up</b></td><td>Guide → category → <span class="mono">/resources/</span></td><td>Exact category name — "Playbooks", "CRM &amp; Data Guides".</td></tr>
+            <tr><td><b>Across</b></td><td>Guide → 2–3 sibling guides</td><td>Descriptive, varied — "speed-to-lead matters most in the first 5 minutes", not "click here".</td></tr>
+            <tr><td><b>To money page</b></td><td>Guide → demo / product / pricing</td><td>Contextual, benefit-led — "GOAL delivers exclusive leads you can actually reach". One primary, not five.</td></tr>
+            <tr><td><b>From money pages</b></td><td>Homepage / how-it-works → <span class="mono">/resources/</span></td><td>Add a "Resources" nav item + a "Learn" section. Signals depth to users and crawlers.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout warn"><span class="lab">Rule of thumb</span><p>3–6 contextual internal links per guide, at least one to a conversion page. Keep total links per page well under 100. Diversify anchor text — repeating the same exact-match anchor everywhere reads as manipulation.</p></div>
+
+      <h3>3.6 — AI / answer-engine visibility (GEO)</h3>
+      <div class="panel">
+        <ul>
+          <li><b>Answer in the first 1–2 sentences.</b> Lead each section with the direct answer, then elaborate. Models lift self-contained, near-the-top statements.</li>
+          <li><b>Use real numbers and name them.</b> "Contacted within 5 minutes → 21× more likely to qualify" is quotable; "respond quickly" is not.</li>
+          <li><b>Structure for parsing.</b> Clear H2/H3 questions, short paragraphs, ordered steps, FAQ blocks. The playbook's 01–11 structure is already ideal.</li>
+          <li><b>Mark it up.</b> HowTo, FAQPage, and Article schema (§3.4) make content machine-readable.</li>
+          <li><b>Build entity authority.</b> Consistent Organization schema + a glossary defining GOAL's terms helps engines cite GOAL by name.</li>
+        </ul>
+      </div>
+
+      <h3>3.7 — Voice &amp; copy standards</h3>
+      <div class="tablecard">
+        <table class="gt">
+          <thead><tr><th style="width:50%">Do</th><th>Don't</th></tr></thead>
+          <tbody>
+            <tr><td>Lead with the agency's problem, in their words.</td><td>Open with GOAL's product or company history.</td></tr>
+            <tr><td>Be directive and specific — "call 21+ times in week one."</td><td>Hedge — "you may want to consider following up."</td></tr>
+            <tr><td>Back claims with numbers and name the source.</td><td>Make vibes-based promises ("convert way more!").</td></tr>
+            <tr><td>Give something usable for free (scripts, checklists, CSV).</td><td>Gate the useful part behind a demo form.</td></tr>
+            <tr><td>Earn the CTA at the end, once value is delivered.</td><td>Interrupt the guide with sales pitches.</td></tr>
+            <tr><td>Plain English; define jargon (link the glossary).</td><td>Acronym soup (RPC, bind rate) with no definition.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+<section class="block" id="s4">
+      <div class="bhead"><span class="ix">04</span><div><h2>Content inventory &amp; roadmap</h2><p>What to publish, and in what order</p></div></div>
+      <div class="tablecard">
+        <table class="gt">
+          <thead><tr><th style="width:33%">Guide</th><th>Category</th><th>Stage</th><th>Primary query</th><th>Priority</th></tr></thead>
+          <tbody>
+            <tr><td><b>30-Day Lead Follow-Up Playbook</b> <span class="tag green">exists</span></td><td>Playbooks</td><td>Mid</td><td class="mc">how to follow up on insurance leads</td><td><span class="tag blue">P1 migrate</span></td></tr>
+            <tr><td><b>Export Lead Data hub</b> + AgencyZoom / Ricochet / Lead Manager <span class="tag green">exists</span></td><td>Guides</td><td>Client</td><td class="mc">agencyzoom export leads</td><td><span class="tag blue">P1 migrate</span></td></tr>
+            <tr><td>Speed-to-Lead: the 5-Minute Rule</td><td>Playbooks</td><td>Mid</td><td class="mc">speed to lead insurance</td><td><span class="tag blue">P1</span></td></tr>
+            <tr><td>Why Exclusive Leads Beat Shared Leads</td><td>Playbooks</td><td>Top</td><td class="mc">exclusive vs shared insurance leads</td><td><span class="tag blue">P1</span></td></tr>
+            <tr><td>Auto Insurance Leads: Agency Guide</td><td>Verticals</td><td>Top</td><td class="mc">auto insurance leads for agents</td><td><span class="tag amber">P2</span></td></tr>
+            <tr><td>Medicare Leads: Agency Guide</td><td>Verticals</td><td>Top</td><td class="mc">medicare insurance leads</td><td><span class="tag amber">P2</span></td></tr>
+            <tr><td>Home Insurance Leads: Agency Guide</td><td>Verticals</td><td>Top</td><td class="mc">home insurance leads for agents</td><td><span class="tag amber">P2</span></td></tr>
+            <tr><td>Aged-Lead Revival Playbook</td><td>Playbooks</td><td>Mid</td><td class="mc">how to work aged insurance leads</td><td><span class="tag amber">P2</span></td></tr>
+            <tr><td>QuoteFunnel Setup &amp; Best Practices</td><td>Product</td><td>Client</td><td class="mc">insurance landing page best practices</td><td><span class="tag amber">P2</span></td></tr>
+            <tr><td>Reading Your GOAL Reports / Attribution</td><td>Product</td><td>Client</td><td class="mc">lead source attribution insurance</td><td><span class="tag amber">P2</span></td></tr>
+            <tr><td>TCPA &amp; Compliant Lead Contact <span class="small">(counsel-reviewed)</span></td><td>Playbooks</td><td>Mid</td><td class="mc">tcpa compliance insurance leads</td><td><span class="tag gray">P3</span></td></tr>
+            <tr><td>Glossary: bind rate, contact rate, RPC, in-market…</td><td>Glossary</td><td>Top</td><td class="mc">what is bind rate insurance</td><td><span class="tag gray">P3</span></td></tr>
+            <tr><td>More CRM export guides (Salesforce, HubSpot, Close…)</td><td>Guides</td><td>Client</td><td class="mc">[crm] export insurance leads</td><td><span class="tag gray">P3 demand-led</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout key"><span class="lab">Sequencing logic</span><p><b>P1</b> = migrate what exists + the two highest-intent net-new playbooks (fast wins, proven format). <b>P2</b> = vertical + product guides that broaden reach and serve onboarding. <b>P3</b> = depth and long-tail. The "request a guide" hook (§3.1) becomes the demand signal that orders the P3 backlog — let client requests, not guesswork, set it.</p></div>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>
