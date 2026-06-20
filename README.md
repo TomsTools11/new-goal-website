@@ -1,19 +1,28 @@
-# GOAL — Client Resources Strategy Website
+# GOAL — Website SEO & Content Strategy
 
-A static site presenting the GOAL Client Resources Website Section Strategy.
+A static site presenting the GOAL website redesign workstream: two SEO audits
+and the content strategy for the on-domain Resources Hub.
 
 ## Pages
 
 | URL | File | Description |
 | --- | --- | --- |
-| `/` | `index.html` | The current Client Resources Strategy dashboard |
-| `/goal-client-resources-strategy.pdf` | PDF | Source PDF document |
+| `/` | `index.html` | Overview / hub — links the three reports + OKR context |
+| `/seo-audit-current` | `seo-audit-current.html` | **Report 01** — full SEO audit of the current site (checkoutgoal.com) |
+| `/seo-audit-redesign` | `seo-audit-redesign.html` | **Report 02** — pre-launch SEO audit of the redesigned site |
+| `/content-strategy` | `content-strategy.html` | **Report 03** — strategic case, IA, copy playbook & content roadmap |
+| `/goal-client-resources-strategy.pdf` | PDF | Source strategy document (archive) |
 
-The homepage serves the most up-to-date report (the structured strategy
-dashboard) directly.
+All pages share a single design system in [`assets/`](./assets):
 
-This is a plain static site — no build step or dependencies. The page is
-self-contained HTML with inline CSS (fonts are loaded from Google Fonts).
+- `assets/report.css` — the brand stylesheet (Inter, blue/navy palette, mint accent)
+- `assets/goal-logo.png` — the GOAL logo
+
+The reports carry `<meta name="robots" content="noindex">` — they are internal
+strategy documents, not public marketing pages.
+
+This is a plain static site — no build step or dependencies (fonts load from
+Google Fonts). Cross-page links are extensionless to match Vercel `cleanUrls`.
 
 ## Deploying to Vercel
 
@@ -35,5 +44,5 @@ vercel --prod # production deployment
 
 ## Configuration
 
-[`vercel.json`](./vercel.json) enables `cleanUrls` so any paths are served
-without their `.html` extension.
+[`vercel.json`](./vercel.json) enables `cleanUrls` so pages are served without
+their `.html` extension, with `trailingSlash` disabled.
