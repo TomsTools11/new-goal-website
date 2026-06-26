@@ -26,7 +26,7 @@
       <a href="#s5"><span class="dot"></span>On-page SEO</a>
       <a href="#s6"><span class="dot"></span>Content &amp; authority</a>
       <a href="#s7"><span class="dot"></span>AI visibility (GEO)</a>
-      <a href="#s8"><span class="dot"></span>Analytics &amp; measurement</a>
+      <a href="#s8"><span class="dot"></span>Search measurement</a>
       <a href="#s9"><span class="dot"></span>What's working</a>
       <a href="#s10"><span class="dot"></span>Recommendations</a>
       <a href="#s11"><span class="dot"></span>Evidence appendix</a>
@@ -44,7 +44,7 @@
   <main class="main">
 
     <div class="exec">
-      <p><b>checkoutgoal.com is a well-built brochure that search engines and AI assistants cannot find.</b> The conversion core works — clear value prop, a demo CTA, SOC&nbsp;2 / TCPA trust signals — but the site has <b>zero search visibility</b>: no indexable content layer, no <span class="mono">robots.txt</span> or sitemap, no structured data, no social tags, no canonical, no <span class="mono">llms.txt</span>, and no analytics. The team's own best content — a 30-day follow-up playbook and a CRM export hub — is stranded on throwaway <span class="mono">*.vercel.app</span> domains. Today's ~5–10 demo requests a month arrive almost entirely by word of mouth, not discovery. This audit grades the live production site as it stands and prioritises the fixes; the <a href="seo-audit-redesign">redesign audit</a> and <a href="content-strategy">content strategy</a> cover the build that replaces it.</p>
+      <p><b>checkoutgoal.com is a well-built brochure that search engines and AI assistants cannot find.</b> The conversion core works — clear value prop, a demo CTA, SOC&nbsp;2 / TCPA trust signals — but the site has <b>zero search visibility</b>: no indexable content layer, no <span class="mono">robots.txt</span> or sitemap, no structured data, no social tags, no canonical, and no <span class="mono">llms.txt</span>. The team's own best content — a 30-day follow-up playbook and a CRM export hub — is stranded on throwaway <span class="mono">*.vercel.app</span> domains. Today's ~5–10 demo requests a month arrive almost entirely by word of mouth, not discovery. This audit grades the live site's SEO as it stands and prioritises the fixes; the <a href="seo-audit-redesign">redesign audit</a> and <a href="content-strategy">content strategy</a> cover the build that replaces it.</p>
     </div>
 
     <!-- ===================== 01 SUMMARY ===================== -->
@@ -53,7 +53,7 @@
 
       <div class="gradewrap" style="margin:4px 0 22px;">
         <div class="grade f">D&minus;</div>
-        <div class="gl"><b>Discoverability: failing. Conversion core: solid.</b><br>The page is technically valid and mobile-clean, but invisible to non-branded search and to answer engines. Nothing here will rank, be cited, or be measured — by design omission, not by penalty.</div>
+        <div class="gl"><b>Discoverability: failing. Conversion core: solid.</b><br>The site is invisible to non-branded search and to answer engines. Nothing here will rank or be cited — by design omission, not by penalty.</div>
       </div>
 
       <div class="kgrid">
@@ -62,10 +62,10 @@
         <div class="kc"><div class="v">~43</div><div class="k">Chars in meta description</div><div class="d">Target 150–160 — and it's duplicated on every page</div></div>
         <div class="kc"><div class="v">2</div><div class="k">Strong guides off-domain</div><div class="d">Stranded on <span class="mono">*.vercel.app</span>, no link equity</div></div>
         <div class="kc"><div class="v">5–10</div><div class="k">Demo requests / month</div><div class="d">Word-of-mouth, not search-driven</div></div>
-        <div class="kc"><div class="v">Jan 2025</div><div class="k">Last modified</div><div class="d"><span class="mono">last-modified</span> header — ~17 months stale</div></div>
+        <div class="kc"><div class="v">Jan 2025</div><div class="k">Last updated</div><div class="d">Content ~17 months stale</div></div>
       </div>
 
-      <p class="pull">The most valuable SEO move available to GOAL is not fixing a tag — it is publishing the content that doesn't exist yet, on the domain that currently has none, with the measurement to prove it worked.</p>
+      <p class="pull">The most valuable SEO move available to GOAL is not fixing a tag — it is publishing the content that doesn't exist yet, on the domain that currently has none.</p>
     </section>
 
     <!-- ===================== 02 SCOPE ===================== -->
@@ -73,19 +73,19 @@
       <div class="bhead"><span class="ix">02</span><div><h2>Scope &amp; method</h2><p>What was reviewed, and how</p></div></div>
       <div class="panel">
         <ul>
-          <li><b>Subject:</b> the public production site at <span class="mono">https://checkoutgoal.com</span> — the homepage plus discoverable pages (<span class="mono">how-it-works.html</span>, <span class="mono">privacy-policy.html</span>).</li>
-          <li><b>Live technical pull:</b> raw <span class="mono">&lt;head&gt;</span> markup, HTTP response headers, and direct probes of <span class="mono">robots.txt</span>, <span class="mono">sitemap.xml</span>, <span class="mono">sitemap_index.xml</span>, <span class="mono">llms.txt</span>, <span class="mono">manifest.json</span>, and clean-URL variants — captured June 2026.</li>
+          <li><b>Subject:</b> the public site at <span class="mono">https://checkoutgoal.com</span> — the homepage plus discoverable pages (<span class="mono">how-it-works.html</span>, <span class="mono">privacy-policy.html</span>).</li>
+          <li><b>Live SEO crawl:</b> raw <span class="mono">&lt;head&gt;</span> markup and direct probes of <span class="mono">robots.txt</span>, <span class="mono">sitemap.xml</span>, <span class="mono">sitemap_index.xml</span>, <span class="mono">llms.txt</span>, and clean-URL variants — captured June 2026.</li>
           <li><b>On-page review:</b> title / meta / heading structure, structured data, Open Graph &amp; Twitter tags, canonical, internal vs. external links, image alt usage, value proposition and trust signals.</li>
           <li><b>Off-page:</b> the two existing GOAL guides published on <span class="mono">*.vercel.app</span> domains, reviewed for the authority they build (and where it lands).</li>
           <li><b>Out of scope here:</b> the redesigned staging site (password-protected) — assessed separately in <a href="seo-audit-redesign">Report&nbsp;02</a>.</li>
         </ul>
       </div>
-      <p class="small">Raw captures (head, headers, URL-probe matrix) are reproduced verbatim in the <a href="#s11">evidence appendix</a>.</p>
+      <p class="small">Raw captures (the SEO-relevant <span class="mono">&lt;head&gt;</span> tags and the URL-probe matrix) are reproduced in the <a href="#s11">evidence appendix</a>.</p>
     </section>
 
     <!-- ===================== 03 SCORECARD ===================== -->
     <section class="block" id="s3">
-      <div class="bhead"><span class="ix">03</span><div><h2>Scorecard</h2><p>Every dimension, graded</p></div></div>
+      <div class="bhead"><span class="ix">03</span><div><h2>Scorecard</h2><p>Every SEO dimension, graded</p></div></div>
       <div class="legend">
         <span><i style="background:#E5484D"></i> Critical</span>
         <span><i style="background:#F0A93B"></i> Needs work</span>
@@ -96,23 +96,21 @@
         <table class="gt">
           <thead><tr><th style="width:24%">Dimension</th><th style="width:16%">Status</th><th>Finding</th></tr></thead>
           <tbody>
-            <tr><td><b>Indexable content footprint</b></td><td class="st"><span class="tag red">Critical</span></td><td>No <span class="mono">/resources</span>, <span class="mono">/guides</span>, <span class="mono">/blog</span>, or <span class="mono">/learn</span> — all return 403. ~4 static brochure pages; zero educational/long-tail content to rank.</td></tr>
-            <tr><td><b>robots.txt</b></td><td class="st"><span class="tag red">Critical</span></td><td>Absent — returns S3 <span class="mono">AccessDenied</span> (403). No crawl directives, no sitemap reference.</td></tr>
+            <tr><td><b>Indexable content footprint</b></td><td class="st"><span class="tag red">Critical</span></td><td>No <span class="mono">/resources</span>, <span class="mono">/guides</span>, <span class="mono">/blog</span>, or <span class="mono">/learn</span> — all return 403. ~4 brochure pages; zero educational/long-tail content to rank.</td></tr>
+            <tr><td><b>robots.txt</b></td><td class="st"><span class="tag red">Critical</span></td><td>Absent (403). No crawl directives, no sitemap reference.</td></tr>
             <tr><td><b>XML sitemap</b></td><td class="st"><span class="tag red">Critical</span></td><td>Absent — <span class="mono">sitemap.xml</span> and <span class="mono">sitemap_index.xml</span> both 403. Nothing submitted for discovery.</td></tr>
             <tr><td><b>Structured data (JSON-LD)</b></td><td class="st"><span class="tag red">Critical</span></td><td>None site-wide. No <span class="mono">Organization</span>, <span class="mono">SoftwareApplication</span>, <span class="mono">FAQPage</span>, or <span class="mono">BreadcrumbList</span> — all of which the offering fits.</td></tr>
             <tr><td><b>Open Graph / Twitter</b></td><td class="st"><span class="tag red">Critical</span></td><td>No social tags on any page. Shared links render with no title, image, or description preview.</td></tr>
             <tr><td><b>llms.txt / AI visibility</b></td><td class="st"><span class="tag red">Critical</span></td><td>Absent (403). No machine-readable guide for answer engines; no schema to be cited from.</td></tr>
-            <tr><td><b>Analytics &amp; Search Console</b></td><td class="st"><span class="tag red">Critical</span></td><td>No GA4, tag manager, or analytics tag found; no Search Console signal. The team cannot see traffic, queries, or conversion at all.</td></tr>
+            <tr><td><b>Search measurement</b></td><td class="st"><span class="tag red">Critical</span></td><td>No Google Search Console footprint and no analytics signal — organic performance is entirely invisible.</td></tr>
             <tr><td><b>Off-domain authority</b></td><td class="st"><span class="tag red">Critical</span></td><td>The two best guides live on <span class="mono">goal-followup-best-practices.vercel.app</span> and <span class="mono">lead-export-guides.vercel.app</span> — equity builds for domains GOAL doesn't market.</td></tr>
             <tr><td><b>Meta descriptions</b></td><td class="st"><span class="tag amber">Needs work</span></td><td>Homepage and how-it-works share the <i>same</i> ~43-char description (<span class="mono">Generate Your own In-market Insurance Leads</span>). Should be unique, 150–160 chars, benefit-led.</td></tr>
             <tr><td><b>H1 headings</b></td><td class="st"><span class="tag amber">Needs work</span></td><td>Multiple <span class="mono">&lt;h1&gt;</span> on the homepage and how-it-works (2 each). Should be exactly one, matching search intent.</td></tr>
             <tr><td><b>Title tags</b></td><td class="st"><span class="tag amber">Needs work</span></td><td>Reasonable length and brand suffix, but a stray <i>leading space</i> and odd "Your own" casing — <span class="mono">&nbsp;GOAL | Generate Your own In-market Insurance Leads</span>.</td></tr>
             <tr><td><b>Canonical tags</b></td><td class="st"><span class="tag amber">Needs work</span></td><td>None present. Low risk on 4 pages today; mandatory once a filtered/paginated content library exists.</td></tr>
-            <tr><td><b>URL design</b></td><td class="st"><span class="tag amber">Needs work</span></td><td>Pages served with <span class="mono">.html</span> extensions; clean-URL paths (<span class="mono">/how-it-works</span>) 403. Relative asset paths (<span class="mono">../manifest.json</span>) are fragile.</td></tr>
-            <tr><td><b>Dependency / page weight</b></td><td class="st"><span class="tag amber">Needs work</span></td><td>Loads Bootstrap&nbsp;5.3, <i>Bootstrap's own docs stylesheet</i> from <span class="mono">getbootstrap.com</span>, Boxicons, animate.css, lite-youtube, and Inter at nine weights — render-blocking, third-party-dependent.</td></tr>
-            <tr><td><b>Content freshness</b></td><td class="st"><span class="tag gray">Watch</span></td><td><span class="mono">last-modified</span> of Jan&nbsp;29 2025 — no meaningful update in ~17 months.</td></tr>
-            <tr><td><b>Mobile / viewport / lang</b></td><td class="st"><span class="tag green">Pass</span></td><td>Responsive viewport meta present, <span class="mono">html lang="en"</span>, theme-color, favicon, PWA manifest. Baseline hygiene is fine.</td></tr>
-            <tr><td><b>HTTPS / delivery</b></td><td class="st"><span class="tag green">Pass</span></td><td>HTTP/2 over CloudFront in front of S3, HTTPS enforced. Fast static delivery — the bones for performance are there.</td></tr>
+            <tr><td><b>URL design</b></td><td class="st"><span class="tag amber">Needs work</span></td><td>Pages served with <span class="mono">.html</span> extensions; clean-URL paths (<span class="mono">/how-it-works</span>) 403. Descriptive, extensionless URLs are what content SEO needs.</td></tr>
+            <tr><td><b>Content freshness</b></td><td class="st"><span class="tag gray">Watch</span></td><td>No meaningful content update in ~17 months — stale even for a brochure.</td></tr>
+            <tr><td><b>Mobile-friendliness</b></td><td class="st"><span class="tag green">Pass</span></td><td>Responsive viewport meta and <span class="mono">html lang="en"</span> present — the mobile baseline Google rewards is fine.</td></tr>
             <tr><td><b>Core conversion path</b></td><td class="st"><span class="tag green">Pass</span></td><td>Clear value prop, demo CTA, SOC&nbsp;2 / TCPA signals, "old way vs. GOAL way" frame. The thing to <i>build on</i>.</td></tr>
           </tbody>
         </table>
@@ -120,26 +118,22 @@
       <div class="callout key"><span class="lab">Reading the grade</span><p>Eight Critical gaps are all <b>omissions</b> — things absent, not things broken or penalised. That is the good news: nothing needs to be undone. Every red row becomes a checklist item the new build (Reports 02–03) satisfies once, then applies to every page thereafter.</p></div>
     </section>
 
-    <!-- ===================== 04 TECHNICAL ===================== -->
+    <!-- ===================== 04 TECHNICAL SEO ===================== -->
     <section class="block" id="s4">
-      <div class="bhead"><span class="ix">04</span><div><h2>Technical SEO</h2><p>Crawl, index, deliver</p></div></div>
+      <div class="bhead"><span class="ix">04</span><div><h2>Technical SEO</h2><p>Crawl, index, structure</p></div></div>
 
       <h3>Crawlability &amp; indexability</h3>
-      <p>The site is hosted as static objects on <b>Amazon S3 behind CloudFront</b> (<span class="mono">server: AmazonS3</span>). Because no <span class="mono">robots.txt</span> or XML sitemap exists, crawlers get no directives and no map — every page must be discovered by link-following alone, and there are only a handful of internal links to follow. Requests for clean paths (<span class="mono">/how-it-works</span>, <span class="mono">/resources</span>, <span class="mono">/guides</span>, <span class="mono">/blog</span>) return S3 <span class="mono">AccessDenied</span> 403s rather than content or a 404, so there is no content directory to crawl and no useful error semantics.</p>
-      <div class="callout warn"><span class="lab">Note on the 403s</span><p>The 403 on <span class="mono">/resources</span> et al. is S3's response to a missing object key, not an intentional block — but to a crawler the effect is identical: nothing indexable lives there. The fix is to <i>publish</i> those paths, then add a sitemap so they're found.</p></div>
+      <p>Because no <span class="mono">robots.txt</span> or XML sitemap exists, crawlers get no directives and no map — every page must be discovered by link-following alone, and there are only a handful of internal links to follow. Requests for clean paths (<span class="mono">/how-it-works</span>, <span class="mono">/resources</span>, <span class="mono">/guides</span>, <span class="mono">/blog</span>) return 403s rather than content or a 404, so there is no content directory to crawl and no useful error semantics.</p>
+      <div class="callout warn"><span class="lab">Note on the 403s</span><p>The 403 on <span class="mono">/resources</span> et al. is simply "no page exists there," not an intentional block — but to a crawler the effect is identical: nothing indexable lives there. The fix is to <i>publish</i> those paths, then add a sitemap so they're found.</p></div>
 
-      <h3>URLs &amp; routing</h3>
+      <h3>URLs &amp; canonicalisation</h3>
       <ul>
         <li>Pages resolve only at <span class="mono">.html</span> URLs (<span class="mono">/how-it-works.html</span>, <span class="mono">/privacy-policy.html</span>); the extensionless versions 403. This blocks the clean, descriptive URLs that content SEO depends on.</li>
-        <li>Asset and manifest references are relative and inconsistent (<span class="mono">assets/favicon.ico</span>, <span class="mono">../manifest.json</span>) — brittle if pages ever move into subdirectories.</li>
-        <li>No canonical tags, so any future duplicate (trailing slash, <span class="mono">.html</span> vs. clean, query params) will split signals.</li>
+        <li>No canonical tags, so any future duplicate (trailing slash, <span class="mono">.html</span> vs. clean, query params) will split ranking signals.</li>
       </ul>
 
-      <h3>Delivery &amp; page weight</h3>
-      <p>CloudFront + HTTP/2 gives the site a fast, cacheable foundation (homepage HTML is ~33&nbsp;KB). That advantage is partly spent in the <span class="mono">&lt;head&gt;</span>, which loads <b>six external CSS/JS dependencies</b> before content: Bootstrap&nbsp;5.3 CSS &amp; JS, <i>Bootstrap's documentation stylesheet</i> (<span class="mono">getbootstrap.com/docs/5.3/assets/css/docs.css</span>), Boxicons, animate.css, the lite-youtube module, and the Inter font requested at <i>nine</i> weights. Pulling a third-party project's <i>docs</i> CSS into production is a fragility and performance smell — it can change or vanish without notice and adds render-blocking bytes for styles the site doesn't need.</p>
-
       <h3>Structured data</h3>
-      <p>No JSON-LD anywhere. An insurance lead-gen SaaS is a textbook fit for <span class="mono">Organization</span>, <span class="mono">SoftwareApplication</span>/<span class="mono">Product</span>, and <span class="mono">FAQPage</span> markup — none of which is present, so the site is ineligible for rich results and offers nothing structured for answer engines to lift.</p>
+      <p>No JSON-LD anywhere. An insurance lead-gen platform is a textbook fit for <span class="mono">Organization</span>, <span class="mono">SoftwareApplication</span>/<span class="mono">Product</span>, and <span class="mono">FAQPage</span> markup — none of which is present, so the site is ineligible for rich results and offers nothing structured for answer engines to lift.</p>
     </section>
 
     <!-- ===================== 05 ON-PAGE ===================== -->
@@ -160,14 +154,14 @@
         <li><b>Leading whitespace</b> in both titles (<span class="mono">"&nbsp;GOAL&nbsp;|&nbsp;…"</span>) — sloppy and trims oddly in SERPs.</li>
         <li><b>Duplicate meta descriptions</b> — every page carries the identical ~43-character string, which is also nearly the homepage H1. Descriptions should be unique per page, 150–160 chars, and benefit-led with a soft CTA.</li>
         <li><b>Casing</b> — "Generate Your own In-market" mixes title-case and lower-case mid-phrase; standardise.</li>
-        <li><b>No keyword targeting beyond brand</b> — titles lead with "GOAL"; none target the operational queries agents actually search ("insurance leads for agents", "exclusive vs shared leads").</li>
+        <li><b>No keyword targeting beyond brand</b> — titles lead with "GOAL"; none target the operational queries agents actually search ("insurance leads for agents", "branded vs shared leads").</li>
       </ul>
 
       <h3>Heading structure</h3>
       <p>The homepage and how-it-works each expose <b>two <span class="mono">&lt;h1&gt;</span> elements</b> — a long-standing on-page error that muddies the page's primary topic. Section headings are styled in ALL-CAPS (<span class="mono">CONVERT PROSPECTS INTO POLICIES</span>, <span class="mono">A BETTER WAY TO GROW</span>); visually fine, but they read as design labels rather than intent-matched H2s. Recommendation: exactly one H1 per page stating the page's promise, with a logical H2/H3 nesting beneath it.</p>
 
       <h3>Copy &amp; trust signals (the good part)</h3>
-      <p>The marketing copy is clear and differentiated: "comprehensive marketing technology platform… attract, capture, and convert insurance leads with profitable ROI," the "old way vs. the GOAL way" frame, SOC&nbsp;2 / CMS / TCPA compliance badges, integration logos, and a prominent demo CTA with phone number. This is a strong conversion skeleton — it simply has no audience arriving from search to convert.</p>
+      <p>The marketing copy is clear and differentiated: "comprehensive marketing technology platform… attract, capture, and convert insurance leads with profitable ROI," the "old way vs. the GOAL way" frame, SOC&nbsp;2 / CMS / TCPA compliance badges, integration logos, and a prominent demo CTA. This is a strong conversion skeleton — it simply has no audience arriving from search to convert.</p>
       <div class="callout warn"><span class="lab">Messaging note — OKR kickoff, 19 Jun 2026</span><p>Leadership is retiring <b>"exclusive"</b> in favour of <b>"branded"</b> ("branded visibility / branded leads"). Fold this into the rewrite of titles, metas, and H1s rather than re-editing the old copy twice.</p></div>
     </section>
 
@@ -183,7 +177,7 @@
           <div class="flow">— no link —</div>
           <div class="node off">goal-followup-best-practices.vercel.app</div>
           <div class="node off">lead-export-guides.vercel.app</div>
-          <p class="small" style="margin-top:12px;">Two genuinely good guides rank (if at all) for throwaway domains. No internal links from the main site, no shared analytics, no path to a demo.</p>
+          <p class="small" style="margin-top:12px;">Two genuinely good guides rank (if at all) for throwaway domains. No internal links from the main site, no path to a demo.</p>
         </div>
         <div class="dcol good">
           <span class="dtag">The fix</span>
@@ -212,11 +206,11 @@
       <p>This is greenfield: every guide published with answer-first copy and <span class="mono">FAQPage</span>/<span class="mono">HowTo</span> schema is a fresh chance to become the cited source. The method is detailed in <a href="content-strategy#s3">Content Strategy §3.6</a>.</p>
     </section>
 
-    <!-- ===================== 08 ANALYTICS ===================== -->
+    <!-- ===================== 08 MEASUREMENT ===================== -->
     <section class="block" id="s8">
-      <div class="bhead"><span class="ix">08</span><div><h2>Analytics &amp; measurement</h2><p>You can't optimise what you can't see</p></div></div>
-      <p>No analytics tag, tag manager, or pixel was found on any page, and there is no Search Console footprint. In practice the team's only measurement of the website today is counting demo-request messages as they land in a Slack channel — there is <b>no visibility into traffic volume, sources, queries, on-site behaviour, or conversion rate</b>. That makes the current ~5–10 demos/month an output with no denominator: it's impossible to say whether it reflects 200 visitors or 2,000.</p>
-      <div class="callout key"><span class="lab">Baseline before launch</span><p>Even before the redesign ships, stand up <b>GA4</b>, <b>Google Search Console</b>, and <b>Bing Webmaster Tools</b> on the current site. A few weeks of real baseline (sessions, sources, demo-form conversion rate) turns the OKR target — lifting demos from 5–10 to 30–50+ — from a guess into a measured delta.</p></div>
+      <div class="bhead"><span class="ix">08</span><div><h2>Search measurement</h2><p>You can't optimise what you can't see</p></div></div>
+      <p>There is no Google Search Console footprint and no analytics signal, so the site's organic performance is invisible: no view of impressions, queries, click-through, rankings, or which pages convert. In practice the only signal the team has today is demo requests counted by hand. That makes the current ~5–10 demos/month an output with no denominator — it's impossible to say whether it reflects 200 visitors or 2,000.</p>
+      <div class="callout key"><span class="lab">Baseline before launch</span><p>Even before the redesign ships, connect <b>Google Search Console</b> and <b>Bing Webmaster Tools</b> (and a basic analytics baseline) on the current site. A few weeks of real data — impressions, queries, and demo-conversion rate — turns the OKR target, lifting demos from 5–10 to 30–50+, from a guess into a measured delta.</p></div>
     </section>
 
     <!-- ===================== 09 WORKING ===================== -->
@@ -225,10 +219,9 @@
       <div class="panel">
         <ul>
           <li><b>A clear, differentiated value proposition</b> — the "marketing technology platform, not a lead aggregator" positioning lands, and pre-empts the EverQuote comparison.</li>
-          <li><b>A working conversion path</b> — prominent demo CTA, phone number, and a "request a demo" flow that already produces qualified word-of-mouth requests.</li>
+          <li><b>A working conversion path</b> — a prominent demo CTA and "request a demo" flow that already produces qualified word-of-mouth requests.</li>
           <li><b>Real trust signals</b> — SOC&nbsp;2, CMS, and TCPA compliance badges plus integration logos; credible for a regulated buyer.</li>
-          <li><b>Fast static delivery</b> — CloudFront/HTTP&nbsp;2 means performance is a tuning exercise, not a re-platform.</li>
-          <li><b>Clean baseline hygiene</b> — valid <span class="mono">lang</span>, responsive viewport, favicon, PWA manifest, theme-color.</li>
+          <li><b>A topical angle content can own</b> — the "branded vs. shared leads" and "old way vs. GOAL way" narratives are exactly the kind of story a resources library can rank for.</li>
         </ul>
       </div>
       <p class="small">The strategic read: the site converts the demand it's <i>handed</i>; it generates none of its own. Reports 02–03 add the demand engine on top of this working core.</p>
@@ -243,9 +236,9 @@
           <div>
             <div class="when">This week · current site</div>
             <div class="h">Make it measurable &amp; indexable</div>
-            <div class="b">Low-effort fixes that unlock everything downstream:
+            <div class="b">Low-effort SEO fixes that unlock everything downstream:
               <ul>
-                <li>Install <b>GA4</b>, <b>Google Search Console</b>, and <b>Bing Webmaster Tools</b>; start a traffic/conversion baseline now.</li>
+                <li>Connect <b>Google Search Console</b> and <b>Bing Webmaster Tools</b> (plus a basic analytics baseline) to start measuring now.</li>
                 <li>Add a <span class="mono">robots.txt</span> and an XML <b>sitemap</b>; reference the sitemap from robots.</li>
                 <li>Write <b>unique 150–160-char meta descriptions</b> per page; remove the duplicated string.</li>
                 <li>Collapse to <b>one H1 per page</b>; strip the leading space from titles.</li>
@@ -290,11 +283,10 @@
         <table class="gt">
           <thead><tr><th>Path</th><th style="width:14%">Status</th><th>Interpretation</th></tr></thead>
           <tbody>
-            <tr><td class="mc">/</td><td><span class="tag green">200</span></td><td>Homepage — static HTML, ~33&nbsp;KB</td></tr>
-            <tr><td class="mc">/how-it-works.html</td><td><span class="tag green">200</span></td><td>Brochure page (~15&nbsp;KB)</td></tr>
-            <tr><td class="mc">/privacy-policy.html</td><td><span class="tag green">200</span></td><td>Privacy page (~44&nbsp;KB)</td></tr>
-            <tr><td class="mc">/manifest.json</td><td><span class="tag green">200</span></td><td>PWA manifest present</td></tr>
-            <tr><td class="mc">/robots.txt</td><td><span class="tag red">403</span></td><td>Absent — S3 AccessDenied</td></tr>
+            <tr><td class="mc">/</td><td><span class="tag green">200</span></td><td>Homepage</td></tr>
+            <tr><td class="mc">/how-it-works.html</td><td><span class="tag green">200</span></td><td>Brochure page</td></tr>
+            <tr><td class="mc">/privacy-policy.html</td><td><span class="tag green">200</span></td><td>Privacy page</td></tr>
+            <tr><td class="mc">/robots.txt</td><td><span class="tag red">403</span></td><td>Absent — no crawl directives</td></tr>
             <tr><td class="mc">/sitemap.xml · /sitemap_index.xml</td><td><span class="tag red">403</span></td><td>Absent — no sitemap</td></tr>
             <tr><td class="mc">/llms.txt</td><td><span class="tag red">403</span></td><td>Absent — no AI guide file</td></tr>
             <tr><td class="mc">/how-it-works · /privacy · /resources · /guides · /blog</td><td><span class="tag red">403</span></td><td>No clean URLs; no content directories</td></tr>
@@ -302,42 +294,16 @@
         </table>
       </div>
 
-      <h3>Homepage <span class="mono">&lt;head&gt;</span> — verbatim</h3>
+      <h3>SEO tags in the homepage <span class="mono">&lt;head&gt;</span> — verbatim</h3>
       <div class="code">
-        <div class="ch"><span class="t">GET https://checkoutgoal.com/</span><span class="tg">&lt;head&gt; · trimmed</span></div>
-        <pre>&lt;meta charset="utf-8"&gt;
+        <div class="ch"><span class="t">GET https://checkoutgoal.com/</span><span class="tg">SEO-relevant tags</span></div>
+        <pre>&lt;title&gt; GOAL | Generate Your own In-market Insurance Leads&lt;/title&gt;   <span class="c">// stray leading space</span>
+&lt;meta name="description" content="Generate Your own In-market Insurance Leads"&gt;   <span class="c">// ~43 chars, duplicated site-wide</span>
 &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-&lt;meta name="format-detection" content="telephone=no"&gt;
-&lt;meta name="description" content="Generate Your own In-market Insurance Leads"&gt;
-&lt;meta name="theme-color" media="(prefers-color-scheme: light)" content="white"&gt;
-&lt;title&gt; GOAL | Generate Your own In-market Insurance Leads&lt;/title&gt;
-&lt;link rel="icon" type="image/x-icon" href="assets/favicon.ico"&gt;
-&lt;link rel="manifest" href="/manifest.json"&gt;
-&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700;800;900&display=swap" rel="stylesheet"&gt;
-&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
-<span class="m">&lt;link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet"&gt;  // 3rd-party docs CSS in prod</span>
-&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
-&lt;link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'&gt;
-&lt;script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.js"&gt;&lt;/script&gt;
-&lt;link rel="stylesheet" href="assets/stylesheets/animate.css"&gt;
-&lt;link rel="stylesheet" href="assets/stylesheets/style.css"&gt;
-<span class="c">// absent: canonical · og:* · twitter:* · application/ld+json · analytics</span></pre>
+&lt;html lang="en"&gt;   <span class="c">// present</span>
+<span class="m">// absent: canonical · og:* · twitter:* · application/ld+json · llms.txt</span></pre>
       </div>
-
-      <h3>Response headers — verbatim</h3>
-      <div class="code">
-        <div class="ch"><span class="t">HTTP/2 response · homepage</span><span class="tg">curl -I</span></div>
-        <pre><span class="b">HTTP/2 200</span>
-content-type: text/html
-content-length: 33515
-last-modified: <span class="m">Wed, 29 Jan 2025 06:08:11 GMT</span>
-server: <span class="m">AmazonS3</span>
-via: 1.1 …cloudfront.net (CloudFront)
-x-cache: Hit from cloudfront
-x-amz-cf-pop: DEN53-P4
-<span class="c">// no HSTS / CSP / X-Content-Type-Options observed</span></pre>
-      </div>
-      <p class="small">Captured live, June 2026. Status codes and header values are reproduced as returned by the origin.</p>
+      <p class="small">Captured live, June 2026. Status codes and tag values are reproduced as returned by the site.</p>
     </section>
 
   </main>
